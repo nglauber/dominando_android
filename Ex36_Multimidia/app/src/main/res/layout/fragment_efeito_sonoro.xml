@@ -1,0 +1,24 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnPlayMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Música"/>
+
+    <Button
+        android:id="@+id/btnPlayExplosao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explosão" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parar" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex16_Fragments</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_hotel_detalhe">HotelDetalheActivity</string>
+
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_novo">Novo</string>
+    <string name="acao_info">Info</string>
+    <string name="acao_delete">Excluir</string>
+    <string name="acao_editar">Editar</string>
+    <string name="acao_compartilhar">Compartilhar</string>
+
+    <string name="hint_busca">Procurar por Hotel</string>
+
+    <string name="sobre_titulo">Dominando o Android</string>
+    <string name="sobre_mensagem">Desenvolvido por nglauber</string>
+    <string name="sobre_botao_site">Site</string>
+
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="classificacao">Classificação</string>
+
+    <plurals name="numero_selecionados">
+        <item quantity="one">1 selecionado</item>
+        <item quantity="other">%d selecionados</item>
+    </plurals>
+
+    <string name="texto_compartilhar">Me hospedei no %1$s e o classifiquei em %2$.1f estrelas</string>
+
+</resources>

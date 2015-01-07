@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex08_EditText</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="nome">Nome</string>
+    <string name="hint_nome">José da Silva</string>
+    <string name="email">Email</string>
+    <string name="hint_email">jose@teste.com</string>
+    <string name="senha">Senha</string>
+    <string name="cep">C.E.P.</string>
+    <string name="msg_erro_email">Email inválido</string>
+    <string name="msg_erro_senha">Senha inválida</string>
+    <string name="msg_sucesso">Usuário %1$s com email %2$s cadastrado com sucesso!</string>
+
+</resources>

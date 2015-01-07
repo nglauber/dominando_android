@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ex04_Result</string>
+    <string name="selecionar_estado">Selecione um estado</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_tela_selecao">Selecione</string>
+
+    <string-array name="estados">
+        <item>Alagoas</item>
+        <item>Bahia</item>
+        <item>Ceará</item>
+        <item>Maranhão</item>
+        <item>Paraíba</item>
+        <item>Pernambuco</item>
+        <item>Piauí</item>
+        <item>Sergipe</item>
+        <item>Rio Grande do Norte</item>
+    </string-array>
+</resources>

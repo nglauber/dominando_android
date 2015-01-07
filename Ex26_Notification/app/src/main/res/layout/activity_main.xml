@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação Simples"
+        android:id="@+id/button"
+        android:onClick="criarNotificacaoSimples"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação Completa"
+        android:id="@+id/button2"
+        android:onClick="criarNotificacaoCompleta"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação Big"
+        android:id="@+id/button3"
+        android:onClick="criarNotificacaoBig"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação com resposta"
+        android:id="@+id/button4"
+        android:onClick="criarNotificacaoComResposta"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação com páginas"
+        android:id="@+id/button5"
+        android:onClick="criarNotificacaoComPaginas"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificação Agrupadas"
+        android:id="@+id/button6"
+        android:onClick="criarNotificacaoAgrupadas"/>
+</LinearLayout>

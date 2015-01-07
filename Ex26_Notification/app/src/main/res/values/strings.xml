@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex26_Notification</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detalhe">DetalheActivity</string>
+    <string name="titulo_notificacao">Notificação %1$d</string>
+    <plurals name="qtde_mensagens">
+        <item quantity="one">1 mensagem</item>
+        <item quantity="other">%1$d mensagens</item>
+    </plurals>
+
+</resources>

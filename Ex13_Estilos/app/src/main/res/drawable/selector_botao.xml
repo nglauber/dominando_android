@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/botao_pressionado"/>
+    <item android:state_enabled="false"
+        android:drawable="@drawable/botao_desabilitado"/>
+    <item android:drawable="@drawable/botao_normal"/>
+</selector>

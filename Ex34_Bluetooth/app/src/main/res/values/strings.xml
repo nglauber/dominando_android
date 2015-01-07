@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex34_Bluetooth</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="acao_iniciar_servidor">Iniciar servidor</string>
+    <string name="acao_iniciar_cliente">Iniciar cliente</string>
+    <string name="msg_erro_bt_indisponivel">Aparelho não suporta Bluetooth</string>
+    <string name="msg_procurando_dispositivos">Procurando dispositivos...</string>
+    <string name="msg_ativar_bluetooth">Você deve ativar o Bluetooth para continuar.</string>
+    <string name="msg_aparelho_invisivel">Para iniciar o servidor, seu aparelho deve estar visível.</string>
+    <string name="aparelhos_encontrados">Aparelhos encontrados</string>
+    <string name="aguarde">Aguarde</string>
+    <string name="mensagem_servidor">Aguardando por conexões...</string>
+    <string name="msg_desconectou">Desconectou</string>
+
+</resources>

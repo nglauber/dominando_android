@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hotéis</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_hotel_detalhe">HotelDetalheActivity</string>
+
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_novo">Novo</string>
+    <string name="acao_info">Info</string>
+    <string name="acao_delete">Excluir</string>
+    <string name="acao_editar">Editar</string>
+    <string name="acao_compartilhar">Compartilhar</string>
+
+    <string name="hint_busca">Procurar por Hotel</string>
+
+    <string name="sobre_titulo">Dominando o Android</string>
+    <string name="sobre_mensagem">Desenvolvido por nglauber</string>
+    <string name="sobre_botao_site">Site</string>
+
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="classificacao">Classificação</string>
+
+    <plurals name="numero_selecionados">
+        <item quantity="one">1 selecionado</item>
+        <item quantity="other">%d selecionados</item>
+    </plurals>
+
+    <string name="erro_sincronizacao">Erro ao sincronizar com o servidor.</string>
+
+    <string name="texto_compartilhar">Me hospedei no %1$s e o classifiquei em %2$.1f estrelas</string>
+
+    <string name="erro_gplay_indisponivel">Google Play Services não disponível</string>
+    <string name="erro_gplay_falha_registrar">Falha ao registrar no Google Play Services</string>
+    <string name="msg_gplay_sucesso">Registrado com sucesso!</string>
+    <string name="texto_notificacao">Lista de Hoteis atualizada!</string>
+
+</resources>

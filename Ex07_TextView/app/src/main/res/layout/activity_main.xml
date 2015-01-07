@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="dominando.android.ex07_textview.MainActivity">
+    <TextView
+        android:text="Nelson Glauber\nEmail: nglaubervasc@gmail.com\nFone: 88990099\nhttp://nglauber.blogspot.com"
+        android:autoLink="phone|email|web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAutoLink"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto bem grande para não caber em apenas uma linha nem em duas"
+        android:textSize="24sp"
+        android:ellipsize="end"
+        android:maxLines="2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fonte monospace"
+        android:textSize="20sp"
+        android:typeface="monospace"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fonte customizada Thin"
+        android:textSize="20sp"
+        android:id="@+id/txtFonte1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fonte customizada Condensed"
+        android:textSize="20sp"
+        android:id="@+id/txtFonte2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto Strike"
+        android:textSize="20sp"
+        android:id="@+id/txtStike"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHtml"/>
+</LinearLayout>

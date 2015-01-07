@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex02_Activity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_toast">Exibir toast</string>
+    <string name="btn_tela2">Tela 2</string>
+    <string name="title_activity_tela2">Tela2Activity</string>
+
+</resources>

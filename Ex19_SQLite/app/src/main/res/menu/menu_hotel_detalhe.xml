@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/action_share"
+        android:title="@string/acao_compartilhar"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+    <item android:id="@+id/acao_editar"
+        android:title="@string/acao_editar"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always|withText"/>
+
+</menu>

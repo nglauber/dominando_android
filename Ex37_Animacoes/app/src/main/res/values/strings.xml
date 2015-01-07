@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex37_Animacoes</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="animacoes">
+        <item>AlphaAnimation</item>
+        <item>RotateAnimation</item>
+        <item>ScaleAnimation</item>
+        <item>TranslateAnimation</item>
+        <item>AnimationSet</item>
+    </string-array>
+    <string-array name="interpolators">
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>CycleInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>OvershootInterpolator</item>
+    </string-array>
+
+    <string name="title_activity_animacoes3">Animacoes3Activity</string>
+    <string name="title_activity_sprite">SpriteActivity</string>
+
+</resources>

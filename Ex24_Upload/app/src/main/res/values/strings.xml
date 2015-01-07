@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex24_Upload</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hint_foto">Digite um texto para a foto</string>
+    <string name="texto_arquivo">Arquivo a ser enviado</string>
+    <string name="btn_selecionar_foto">Selecionar arquivo</string>
+    <string name="btn_enviar_foto">Enviar Foto</string>
+    <string name="msg_sucesso">Upload realizado com sucesso</string>
+    <string name="msg_falha">Falha ao enviar arquivo</string>
+
+</resources>

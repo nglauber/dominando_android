@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true">
+    <FrameLayout
+        android:id="@+id/previewCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/btnCapturar"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#CCCC"
+        android:layout_gravity="center_vertical|right"
+        android:text="Capturar" />
+</FrameLayout>

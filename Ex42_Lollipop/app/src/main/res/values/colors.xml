@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cor_texto_primaria">#FFFFFF</color>
+    <color name="cor_primaria">#3F51B5</color>
+    <color name="cor_primaria_escura">#303F9F</color>
+    <color name="cor_primaria_selecao">#C5CAE9</color>
+    <color name="cor_acentuada">#FF4081</color>
+    <color name="cor_acentuada_escura">#F50057</color>
+    <color name="cor_acentuada_selecao">#FF80AB</color>
+</resources>

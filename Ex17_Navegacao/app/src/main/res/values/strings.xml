@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex17_Navegacao</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="opcoes">
+        <item>Abas</item>
+        <item>Spinner</item>
+        <item>View Pager</item>
+    </string-array>
+    <string-array name="secoes">
+        <item>Seção 1</item>
+        <item>Seção 2</item>
+        <item>Seção 3</item>
+    </string-array>
+
+    <array name="cores_bg">
+        <item>#F44336</item>
+        <item>#4CAF50</item>
+        <item>#03A9F4</item>
+    </array>
+    <array name="cores_texto">
+        <item>#FFFFFF</item>
+        <item>#000000</item>
+        <item>#FFFFFF</item>
+    </array>
+
+    <string name="title_activity_tela_abas">TelaAbasActivity</string>
+    <string name="title_activity_tela_spinner">TelaSpinnerActivity</string>
+    <string name="title_activity_tela_pager">TelaPagerActivity</string>
+</resources>

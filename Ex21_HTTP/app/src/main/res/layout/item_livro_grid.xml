@@ -1,0 +1,19 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgCapa"
+        android:layout_width="75dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="2"
+        android:ellipsize="end"
+        android:text="@null"/>
+</LinearLayout>

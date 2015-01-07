@@ -1,0 +1,12 @@
+<resources>
+    <style name="TemaBase" parent="@style/Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/cor_texto_primaria</item>
+        <item name="colorPrimary">@color/cor_primaria</item>
+        <item name="colorPrimaryDark">@color/cor_primaria_escura</item>
+        <item name="colorAccent">@color/cor_acentuada</item>
+        <item name="colorControlHighlight">@color/cor_primaria_selecao</item>
+    </style>
+
+    <style name="AppTheme" parent="TemaBase" />
+</resources>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ex10_Adapter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="texto_cabecalho">Carros</string>
+    <string name="nenhum_carro">Nenhum carro cadastrado</string>
+    <plurals name="texto_rodape">
+        <item quantity="one">1 carro</item>
+        <item quantity="other">%d carros</item>
+    </plurals>
+
+</resources>
