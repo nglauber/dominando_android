@@ -22,12 +22,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.Geofence;
-import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationStatusCodes;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -44,11 +45,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends ActionBarActivity implements
-        GooglePlayServicesClient.ConnectionCallbacks,
-        GooglePlayServicesClient.OnConnectionFailedListener,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener,
         LocationListener,
-        GoogleMap.OnMapLongClickListener,
-        LocationClient.OnAddGeofencesResultListener {
+        GoogleMap.OnMapLongClickListener {
 
     static final int LOADER_ENDERECO = 1;
     static final String EXTRA_ORIG = "orig";
@@ -66,7 +66,7 @@ public class MainActivity extends ActionBarActivity implements
     LatLng mDestino;
 
     GoogleMap mGoogleMap;
-    LocationClient mLocationClient;
+    GoogleApiClient mGoogleApiClient;
     LatLng mOrigem;
 
     ArrayList<LatLng> mRota;
@@ -85,7 +85,11 @@ public class MainActivity extends ActionBarActivity implements
                 getSupportFragmentManager().findFragmentById(R.id.map);
         mGoogleMap = fragment.getMap();
 
-        mLocationClient = new LocationClient(this, this, this);
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+            .addConnectionCallbacks(this)
+            .addOnConnectionFailedListener(this)
+            .addApi(LocationServices.API)
+            .build();
 
         mEdtLocal = (EditText) findViewById(R.id.edtLocal);
         mBtnBuscar = (ImageButton) findViewById(R.id.imgBtnBuscar);
@@ -107,12 +111,12 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     protected void onStart() {
         super.onStart();
-        mLocationClient.connect();
+        mGoogleApiClient.connect();
     }
 
     @Override
     protected void onStop() {
-        mLocationClient.disconnect();
+        mGoogleApiClient.disconnect();
         super.onStop();
     }
 
@@ -121,7 +125,7 @@ public class MainActivity extends ActionBarActivity implements
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PlayServicesUtils.REQUEST_CODE_ERRO_PLAY_SERVICES
                 && resultCode == RESULT_OK) {
-            mLocationClient.connect();
+            mGoogleApiClient.connect();
         }
     }
 
@@ -146,7 +150,7 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     public void onConnected(Bundle dataBundle) {
         Log.d("Dominando", "onConnected");
-        Location location = mLocationClient.getLastLocation();
+        Location location = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         if (location != null) {
             mOrigem = new LatLng(location.getLatitude(), location.getLongitude());
             atualizarMapa();
@@ -165,7 +169,7 @@ public class MainActivity extends ActionBarActivity implements
     }
 
     @Override
-    public void onDisconnected() {
+    public void onConnectionSuspended(int i) {
         Log.d("Dominando", "onDisconnected");
     }
 
@@ -382,7 +386,8 @@ public class MainActivity extends ActionBarActivity implements
         locationRequest.setInterval(5 * 1000);
         locationRequest.setFastestInterval(1 * 1000);
 
-        mLocationClient.requestLocationUpdates(locationRequest, this);
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, locationRequest, this);
     }
 
     @Override
@@ -393,7 +398,7 @@ public class MainActivity extends ActionBarActivity implements
 
     @Override
     public void onMapLongClick(LatLng latLng) {
-        if (mLocationClient.isConnected()) {
+        if (mGoogleApiClient.isConnected()) {
             PendingIntent pit = PendingIntent.getBroadcast(
                     this,
                     0,
@@ -409,16 +414,17 @@ public class MainActivity extends ActionBarActivity implements
 
             List<Geofence> geofences = new ArrayList<Geofence>();
             geofences.add(mGeofenceInfo.getGeofence());
-            mLocationClient.addGeofences(geofences, pit, this);
-        }
-    }
-
-    @Override
-    public void onAddGeofencesResult(int i, String[] strings) {
-        if (LocationStatusCodes.SUCCESS == i) {
-            mGeofenceDB.salvarGeofence("1", mGeofenceInfo);
-            mGeofenceInfo = null;
-            atualizarMapa();
+            LocationServices.GeofencingApi.addGeofences(mGoogleApiClient, geofences, pit)
+                    .setResultCallback(new ResultCallback<Status>() {
+                        @Override
+                        public void onResult(Status status) {
+                            if (status.isSuccess()) {
+                                mGeofenceDB.salvarGeofence("1", mGeofenceInfo);
+                                mGeofenceInfo = null;
+                                atualizarMapa();
+                            }
+                        }
+                    });
         }
     }
 }

@@ -5,23 +5,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 import com.google.android.gms.location.Geofence;
-import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.GeofencingEvent;
+
 import java.util.List;
 
 public class GeofenceReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        if (LocationClient.hasError(intent)) {
-            int errorCode = LocationClient.getErrorCode(intent);
+        GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
+        if (geofencingEvent.hasError()) {
+            int errorCode = geofencingEvent.getErrorCode();
             Toast.makeText(context, "Erro no serviço de localização: " + errorCode,
                     Toast.LENGTH_LONG).show();
 
         } else {
-            int transicao = LocationClient.getGeofenceTransition(intent);
+            int transicao = geofencingEvent.getGeofenceTransition();
             if (transicao == Geofence.GEOFENCE_TRANSITION_ENTER
                     || transicao == Geofence.GEOFENCE_TRANSITION_EXIT) {
 
-                List<Geofence> geofences = LocationClient.getTriggeringGeofences(intent);
+                List<Geofence> geofences = geofencingEvent.getTriggeringGeofences();
 
                 Toast.makeText(context,
                         "Geofence! " + transicao +" - "+ geofences.get(0).getRequestId(),
