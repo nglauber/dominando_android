@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity {
         listView.addFooterView(txtFooter);
 
         // EmptyView só funciona com ListActivity...
-        findViewById(android.R.id.empty).setVisibility(adapter.getCount() > 0 ? View.VISIBLE : View.GONE);
+        listView.setEmptyView(findViewById(android.R.id.empty));
     }
 }
 
