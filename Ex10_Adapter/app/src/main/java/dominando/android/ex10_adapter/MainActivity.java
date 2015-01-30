@@ -40,7 +40,6 @@ public class MainActivity extends ActionBarActivity {
                 Carro carro = (Carro)adapterView.getItemAtPosition(position);
                 Toast.makeText(MainActivity.this,
                         carro.modelo + "-" + carro.ano, Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -61,9 +60,7 @@ public class MainActivity extends ActionBarActivity {
         txtFooter.setGravity(Gravity.RIGHT);
         txtFooter.setPadding(0, PADDING, PADDING, PADDING);
         listView.addFooterView(txtFooter);
-
-        // EmptyView só funciona com ListActivity...
-        findViewById(android.R.id.empty).setVisibility(adapter.getCount() > 0 ? View.VISIBLE : View.GONE);
+        listView.setEmptyView(findViewById(android.R.id.empty));
     }
 }
 
