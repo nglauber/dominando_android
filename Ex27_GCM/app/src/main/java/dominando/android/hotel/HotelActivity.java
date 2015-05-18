@@ -57,25 +57,6 @@ public class HotelActivity extends ActionBarActivity
         } else {
             Toast.makeText(this, R.string.erro_gplay_indisponivel, Toast.LENGTH_SHORT).show();
         }
-        if (GcmHelper.googlePlayServicesEstaDisponivel(this)) {
-            GcmHelper.registrar(this, new GcmHelper.AoRegistrarDispositivo() {
-                @Override
-                public void aoRegistrar(String regId, boolean emSegundoPlano) {
-                    if (regId != null){
-                        Log.d("NGVL", regId);
-                        Toast.makeText(HotelActivity.this,
-                                "Registrado com sucesso! \n"+ regId,
-                                Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(HotelActivity.this,
-                                R.string.erro_gplay_falha_registrar,
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        } else {
-            Toast.makeText(this, R.string.erro_gplay_indisponivel, Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override
